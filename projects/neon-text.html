@@ -1,0 +1,37 @@
+<style>
+body { 
+  margin: 0; 
+  height: 100vh;
+  background: #000;
+}
+
+.neon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: #fff;
+  text-shadow: 0 0 20px #ff005b;
+}
+
+.neon::after {
+  content: attr(data-text);
+  position: absolute;
+  left:0;
+  top:0;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(10px)
+}
+
+
+</style>
+
+<body>
+  <h1 class="neon" data-text="[Neon_Light]">[Neon_Light]</h1>
+
+
+</body>
+

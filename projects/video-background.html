@@ -1,0 +1,50 @@
+<style>
+body { margin: 0; }
+
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner video {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.banner h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 4.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.banner h1::selection {
+  color: skyblue;
+}
+
+</style>
+
+<body>
+  <div class="banner">
+    <video autoplay muted loop>
+      <source src="./assets/video/bg.mp4" type="video/mp4">
+    </video>
+    <h1>Fullscreen Video Banner</h1>
+  </div>
+</body>
+
+<style defer>
+
+
+
+</style>

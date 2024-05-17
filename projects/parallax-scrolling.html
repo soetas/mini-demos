@@ -1,0 +1,82 @@
+<style>
+body { 
+  margin: 0;
+  background: #0a2a43;
+  min-height: 1500px;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section img {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section::after {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 1;
+}
+
+section::before {
+  content:"";
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100%;
+  background: #0a2a43;
+  mix-blend-mode: color;
+  z-index: 2;
+}
+
+section h2 {
+  position: relative;
+  color: #fff;
+  font-size: 10rem;
+  z-index: 1;
+}
+
+</style>
+
+<body>
+  <section>
+    <img src="./assets/img/bg.jpg" alt="" id="bg">
+    <img src="./assets/img/moon.png" alt="" id="moon" >
+    <img src="./assets/img/mountain.png" alt="" id="mountain">
+    <h2>Moon Light</h2>
+  </section>
+</body>
+
+<script defer>
+const bg = document.getElementById('bg')
+const moon = document.getElementById('moon')
+const mountain = document.getElementById('mountain')
+
+window.addEventListener('scroll', ()=>{
+  const scrollY = window.scrollY
+
+  bg.style.top = `${scrollY * 0.5}px`
+  moon.style.left = `${-scrollY * 0.5}px`
+  mountain.style.top = `${-scrollY * 0.05}px`
+
+})
+
+
+</script>
